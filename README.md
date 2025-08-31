@@ -3,14 +3,16 @@
 Physics-Informed Machine Learning for Shear Wave Velocity Prediction
 This repository contains the code and workflow for predicting shear wave velocity (Vs) from conventional well log data using a physics-informed machine learning approach. The project's main goal is to build a model that is not only accurate but also geologically consistent, leveraging rock physics principles to guide the machine learning process.
 
-📖 Project Overview
+#📖 Project Overview
+
 Predicting shear wave velocity (Vs) is essential for seismic interpretation, reservoir characterization, and geomechanical studies. However, Vs logs are often unavailable due to the cost and difficulty of acquisition. This project addresses this challenge by training a machine learning model to predict Vs using more common well logs (e.g., compressional velocity, density, gamma-ray, neutron porosity).
 
 The key innovation here is the physics-informed methodology. Instead of treating the problem as a purely statistical "black-box" exercise, we integrate domain knowledge from rock physics. This ensures the model's predictions adhere to known physical laws and geological constraints, making the results more robust and reliable.
 
 Furthermore, we use SHAP (SHapley Additive exPlanations) to interpret the final model. This allows us to verify that the model is learning physically meaningful relationships between the input logs and the predicted shear wave velocity.
 
-🔬 Methodology
+#🔬 Methodology
+
 The workflow is designed to ensure the final model is both accurate and geologically sound. It follows these key steps:
 
 Data Ingestion & QC: Well log data from multiple wells (Bangora-1 and Bangora-4) in Log ASCII Standard (LAS) format is loaded, merged, and quality-controlled to handle missing values and outliers.
@@ -26,7 +28,8 @@ Does an increase in density (RHOB) and compressional velocity (Vp) lead to an in
 How does the model treat changes in clay content (indicated by Gamma Ray)?
 This step validates that the model is not just fitting noise but has captured the underlying petrophysical drivers of shear wave velocity.
 
-✨ Key Features
+#✨ Key Features
+
 Shear Wave Velocity Prediction: The primary focus is on accurately estimating a critical elastic parameter.
 
 Physics-Informed Approach: Integrates rock physics principles to guide model development and ensure geologically plausible results.
@@ -37,7 +40,8 @@ Multi-Well Analysis: Aggregates data from multiple wells to build a more general
 
 Comprehensive Visuals: Combines traditional log plots with advanced SHAP visualizations for a complete analysis.
 
-🛠️ Technologies & Libraries Used
+#🛠️ Technologies & Libraries Used
+
 lasio: For reading and writing Log ASCII Standard (LAS) files.
 
 pandas & numpy: For data manipulation and numerical computation.
